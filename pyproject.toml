@@ -22,9 +22,12 @@ build-backend = "poetry.core.masonry.api"
 [dependency-groups]
 dev = [
     "ruff (>=0.15.0,<0.16.0)",
-    "pytest (>=9.0.2,<10.0.0)"
+    "pytest (>=9.0.2,<10.0.0)",
+    "pytest-cov (>=7.0.0,<8.0.0)"
 ]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
 
 [tool.poetry.scripts]
 coolerWidget = "coolerwidget.main:main"
-
