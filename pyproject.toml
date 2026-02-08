@@ -1,0 +1,29 @@
+[project]
+name = "coolerwidget"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Kamil 'Kamaś' Bruchal",email = "kamil.bruchal.pro@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11,<3.15"
+dependencies = [
+    "pyside6 (>=6.10.2,<7.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "coolerwidget", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "ruff (>=0.15.0,<0.16.0)",
+    "pytest (>=9.0.2,<10.0.0)"
+]
+
+[tool.poetry.scripts]
+coolerWidget = "coolerwidget.main:main"
+
